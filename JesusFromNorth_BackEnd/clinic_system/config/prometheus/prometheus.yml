@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: 'clinic_system'
+    metrics_path: '/system_clinic/api/v0.1/actuator/prometheus'
+    scheme: 'http'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
